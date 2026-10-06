@@ -13,6 +13,10 @@ The repository is intentionally **not** an idea dump. It is a decision system.
 - [Current ranked portfolio](INDEX.md)
 - [Pipeline](PIPELINE.md)
 - [Decision journal](DECISIONS.md)
+- [Active products](portfolio/active-products.md)
+- [Experiments](portfolio/experiments.md)
+- [Revenue](portfolio/revenue.md)
+- [Portfolio metrics](portfolio/metrics.md)
 - [Scouting rules](SCOUTING.md)
 - [Daily research](daily/2026-10-06.md)
 
