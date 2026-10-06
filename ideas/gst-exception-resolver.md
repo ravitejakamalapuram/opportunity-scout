@@ -5,20 +5,22 @@
 ## Status
 
 - Rank: **#1**
-- Movement: 🆕 Initial ranking
+- Movement: ↑ Strengthened, wedge narrowed
 - Stage: **VALIDATING**
 - First discovered: 2026-10-06
 - Last validated: Not yet validated with customer data
-- Last updated: 2026-10-06
-- Recommended action: **Test with 3 CA firms using anonymized real reconciliation files**
+- Last updated: 2026-10-07
+- Recommended action: **Validate exception-resolution workflow with 3 CA firms; do not build generic reconciliation**
 
 ## TL;DR
 
 Indian CA/accounting teams repeatedly reconcile books against GST data. The painful part is often not finding a mismatch; it is determining **why** it happened and **what to do next**.
 
-The proposed wedge is deliberately narrow:
+The proposed wedge is now narrower:
 
-> Upload two spreadsheet exports → reconcile deterministically → classify exceptions → explain likely cause → produce an actionable report.
+> **Resolve the exceptions that block or delay ITC decisions, not another generic matching engine.**
+
+Upload two spreadsheet exports → reconcile deterministically → classify high-value exceptions → generate the evidence/action queue for the CA team. The differentiator should be the resolution workflow: why this exception matters, what evidence is missing, and what should be checked next.
 
 The MVP should not start with GSTN API integration or a full accounting platform.
 
@@ -81,11 +83,11 @@ flowchart LR
 
 Current research found Indian practitioner discussions describing invoice-level GST reconciliation as a recurring workload, including discussions from CA professionals managing many clients.
 
-Industry products such as ClearTax also document multiple reconciliation mismatch categories, demonstrating that this is a real and recurring workflow.
+Current evidence is stronger than the initial snapshot. GCCI recently sought action on persistent import-IGST/GSTR-2B mismatches that can delay or deny rightful ITC, showing direct working-capital consequences. At the same time, multiple products now market automated GSTR-2B reconciliation. The market validates the pain but rules out a generic matcher as the wedge.
 
 ### Inference
 
-A narrow "exception resolver" may be more differentiated than another generic GST/accounting platform.
+A narrow exception-resolution workflow may still be differentiated, but only if it handles messy cases existing matchers leave for humans: import IGST discrepancies, period/timing issues, amendments/credit notes, supplier follow-up, and evidence for the final decision.
 
 ### Hypothesis
 
@@ -103,7 +105,7 @@ Competitor research must be refreshed before launch.
 
 ## Why now?
 
-AI makes it practical to add a useful **explanation layer** to deterministic reconciliation.
+AI makes it practical to add a useful **resolution layer** on top of deterministic reconciliation. Existing matching is increasingly commoditized; the opportunity is the human decision queue after matching.
 
 The product can say:
 
@@ -214,7 +216,7 @@ Initial hypotheses:
 - small monthly plan;
 - multi-client CA-firm plan.
 
-Potential starting experiments may test roughly ₹500–₹5,000/month depending on client volume and value.
+Pricing should not be tested until the workflow proves it saves review time or protects meaningful ITC. Existing market offerings suggest users already pay for reconciliation, so the first monetization test should be against the value of exception resolution rather than commodity matching.
 
 These are **pricing hypotheses, not market facts**.
 
@@ -279,12 +281,16 @@ Kill this wedge if repeated real-data trials show no meaningful improvement over
 |---|---|---|
 | 2026-10-06 | Practitioner discussions describe recurring GST reconciliation work. | Strong problem signal; needs direct validation. |
 | 2026-10-06 | Existing tax products document multiple reconciliation mismatch categories. | Confirms established workflow, but not necessarily unmet demand. |
+| 2026-10-07 | GCCI sought urgent action on persistent import-IGST/GSTR-2B mismatches affecting ITC and working capital. | Strengthens severity and suggests a high-value exception class worth testing. |
+| 2026-10-07 | TaxSolver markets automated GSTR-2B reconciliation to 250+ CA firms and handles ERP/Excel inputs. | Confirms category demand, but makes generic reconciliation a weak wedge. |
+| 2026-10-07 | Mark IT offers browser-only GSTR-2B vs books reconciliation with no server upload. | Commodity matching is already easy to access; differentiation must be downstream of matching. |
 
 ## Ranking history
 
 | Date | Rank | Stage | Movement | Reason |
 |---|---:|---|---|---|
 | 2026-10-06 | 1 | VALIDATING | 🆕 | Best current evidence-to-effort path. |
+| 2026-10-07 | 1 | VALIDATING | ↑ | Fresh import-IGST mismatch evidence increases severity, while competitive products force a narrower exception-resolution wedge. |
 
 ## Decision history
 
