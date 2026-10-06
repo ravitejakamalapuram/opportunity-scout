@@ -5,12 +5,12 @@
 ## Status
 
 - Rank: **#2**
-- Movement: 🆕 Initial ranking
+- Movement: 🔻 Major downgrade — direct substitutes found
 - Stage: **VALIDATING**
 - First discovered: 2026-10-06
 - Last validated: Not yet validated with developers
-- Last updated: 2026-10-06
-- Recommended action: **Prototype a GitHub Action that comments on agent permission changes**
+- Last updated: 2026-10-07
+- Recommended action: **Do not build the generic wedge; revisit only if a differentiated niche emerges**
 
 ## TL;DR
 
@@ -104,7 +104,7 @@ Current MCP/agent security research and issue discussions show recurring concern
 - browser capabilities;
 - permission boundaries.
 
-There are also emerging products/projects for MCP scanning, agent governance and configuration auditing.
+There are now direct implementations of the exact concept: Agent Permission Diff Bot provides PR-native permission diffs and a GitHub Action; agent-permission-diff provides CI/SARIF; agent-scope-diff explicitly positions itself as a git diff for agent access. Snyk Agent Scan also covers MCP/agent/skill security.
 
 ### Inference
 
@@ -112,7 +112,7 @@ The market is real, but the generic "agent security scanner" category is increas
 
 ### Hypothesis
 
-Developers may adopt a lightweight PR-native permission diff because it fits an existing workflow and requires no runtime proxy.
+The PR-native experience is sensible, but the market now contains multiple open implementations. A solo entrant would need a stronger moat such as runtime-vs-declared permission drift or a specific enterprise/compliance workflow.
 
 ## Competition
 
@@ -261,6 +261,7 @@ Kill this exact wedge if developers prefer existing scanners and the PR-native e
 | Date | Rank | Stage | Movement | Reason |
 |---|---:|---|---|---|
 | 2026-10-06 | 2 | VALIDATING | 🆕 | Strong market signal, but generic category is crowded. |
+| 2026-10-07 | 3 | VALIDATING | 🔻 | Exact wedge now has multiple direct open-source implementations; no differentiated demand is proven. |
 
 ## Decision history
 
