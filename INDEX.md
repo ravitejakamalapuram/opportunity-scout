@@ -33,6 +33,24 @@ This is the current ranked view of the opportunity portfolio. Ranking is **ordin
 
 ---
 
+## Portfolio operating layer
+
+| Area | Source of truth | Purpose |
+|---|---|---|
+| Opportunities | `ideas/*.md` + `INDEX.md` | Discover and rank problems worth validating |
+| Experiments | `portfolio/experiments.md` | Track hypotheses and decision-quality evidence |
+| Products | `portfolio/active-products.md` | Track what is being built, launched, grown, or maintained |
+| Revenue | `portfolio/revenue.md` | Track actual customers and money, not pricing guesses |
+| Metrics | `portfolio/metrics.md` | Decide where the next work block has the highest leverage |
+
+### Daily operating question
+
+> **If I only had the next 5 focused hours, where should I spend them?**
+
+The daily scout must answer this across the whole portfolio—not just among new ideas.
+
+---
+
 ## Pipeline
 
 | Stage | Current opportunities |
